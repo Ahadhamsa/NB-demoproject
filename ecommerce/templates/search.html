@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1></h1>
+{% if p %}
+
+<div class="row">
+{% for i in p %}
+    <div class="col-sm-4 mt-4"><div class="card" style="width: 90%;">
+  <img src="{{i.image.url}}" height="150px" width="50%"  class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title text-center">{{i.name}}</h5>
+      <h5 class="card-title text-center">{{i.price}}</h5>
+      <p class="card-text"></p>
+    <center><a href="{% url 'shop:detail' i.name %}" class="btn btn-primary"> Details</a></center>
+  </div>
+    </div>
+    </div>{% endfor %}
+
+</div>
+{% else %}
+<h2 class="text-center">No Result Found</h2>
+{% endif %}
+{% endblock %}

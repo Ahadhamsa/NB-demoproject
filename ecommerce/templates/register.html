@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container" style="margin-bottom:100px;">
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+  <center><div class="mb-3">
+     <label class="form-label ">USERNAME</label>
+    <input type="input" name="n" class="form-control" placeholder="enter the username">
+  </div>
+    <div class="mb-3">
+    <label  class="form-label ">PASSWORD</label>
+    <input type="password" name="p" class="form-control " placeholder="enter the password">
+  </div>
+  <div class="mb-3">
+    <label class="form-label ">CONFIRMPASSWORD</label>
+    <input type="password" name="c" class="form-control " placeholder="enter the password">
+  </div>
+  <div class="mb-3">
+    <label class="form-label ">FIRSTNAME</label>
+    <input type="text" name="f" class="form-control " placeholder="enter firstname">
+  </div>
+    <div class="mb-3">
+    <label class="form-label">LASTNAME</label>
+    <input type="text" name="l" class="form-control " placeholder="enter lastname">
+  </div>
+    <div class="mb-3">
+    <label class="form-label">EMAILADRESS</label>
+    <input type="email" name="e" class="form-control " placeholder="enter valid emailaddress">
+    </div>
+  <div class="mb-3">
+    <label class="form-label">PHONE</label>
+    <input type="number" name="ph" class="form-control " placeholder="enter valid phonenumber">
+    </div>
+  <div class="mb-3">
+    <label class="form-label">PLACE</label>
+    <input type="text" name="pl" class="form-control " placeholder="enter your location">
+    </div></center>
+
+
+  <center><button type="submit" class="btn btn-secondary">submit</button></center>
+</form></div></center>
+
+{% endblock %}

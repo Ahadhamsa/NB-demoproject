@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<center><form method="POST">
+  {% csrf_token %}
+  <div class="mb-3">
+    <label class="form-label">ADDRESS</label>
+    <input type="text" class="form-control" name="a" Placeholder="enter adress">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">ACCOUNT NUMBER</label>
+    <input type="number" class="form-control" name="n" placeholder="enter valid account number">
+  </div>
+    <div class="mb-3">
+    <label  class="form-label">PHONE NUMBER</label>
+    <input type="number" class="form-control" name="p" placeholder="valid phone number">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form></center>
+{% endblock %}
